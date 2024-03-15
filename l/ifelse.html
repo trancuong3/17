@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>tính năm nhuận</title>
+</head>
+
+<body>
+<b><h1>nhập năm</h1></b>
+<label><input type="text" id="nam"></label>
+<button type="button" onclick="namnhuan()">kiểm tra</button>
+<p id="result"></p>
+</body>
+
+<script>
+  function namnhuan() {
+    let Year = parseFloat(document.getElementById("nam").value);
+    let result = document.getElementById("result");
+
+    if ((Year % 4 == 0 && Year % 100 != 0) || Year % 400 == 0) {
+      result.innerHTML = Year + " là năm nhuận";
+    } else {
+      result.innerHTML = Year + " không là năm nhuận";
+    }
+  }
+</script>
+
+</html>
